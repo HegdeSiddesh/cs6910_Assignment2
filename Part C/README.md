@@ -36,3 +36,5 @@ If the files are located somewhere else then mention the path while calling the 
 yolo.py --help
 ```
 
+**Link for the video** :- https://www.youtube.com/watch?v=1NUm1WE2tVo&t=2s
+
