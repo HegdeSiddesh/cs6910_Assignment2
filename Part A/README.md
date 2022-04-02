@@ -92,7 +92,7 @@ The following parameters need to be passed using the command line:
 
 The best model after training and wandb sweeps has the following architecture:
 
-![Model Architecture](https://github.com/HegdeSiddesh/cs6910_Assignment2/blob/main//Part%20A/model_arch.jpg?raw=true)
+![Model Architecture](https://github.com/HegdeSiddesh/cs6910_Assignment2/blob/main/Part%20A/model_arch.png)
 
 
 
