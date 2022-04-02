@@ -32,6 +32,25 @@ The code sample for the same is as follows:
 ```python
 model = executePretrainedModel(parameters, log = False)
 ```
+
+## Passing parameters using command line argument
+
+To train the model using parameters passed by command line argument, the following process needs to be followed:
+
+      1. Use the partB.py file for this process.
+      2. Update the filePath variable with the appropriate path for the dataset.
+      3. Run the python file and enter the arguments when prompt appears on the command line.
+      
+The following parameters need to be passed using the command line:
+
+        1. layers_unfreeze:Number of layers from end of pretrained model to be used while training (integer, eg:20)
+        2. model_num:The number for the pretrained model to be used (integer, (1:ResNet50, 2:InceptionV3, 3:InceptionResNetV2, 4:Xception, 5:MobileNetV2))
+        3. dense_layers:Neurons in the dense layer(list, eg: [128])
+        4. epochs:Number of epochs to tun the model (integer, eg: 10)
+        5. batch_size: Batch size (integer, eg: 256)
+        6. augment_data:Augment data or not ('yes' or 'no')
+        7. dropout: Dropout rate (float, eg: 0.2)
+
 ## Testing the trained model on test data
 
 The data preparation part for the test data is as follows:
