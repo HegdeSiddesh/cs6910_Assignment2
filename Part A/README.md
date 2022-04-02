@@ -88,6 +88,34 @@ The following parameters need to be passed using the command line:
       9. augment_data:Augment data or not ("yes" or "no")
       10. dropout_rate Dropout rate (float, eg:0.1)
       
+## Testing the trained model on test data
+
+The data preparation part for the test data is as follows:
+
+```python
+  test_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
+  test_gen = test_datagen.flow_from_directory(
+          '/content/inaturalist_12K/val',
+          target_size=(256,256),
+              batch_size=parameters.batch_size,
+              class_mode='categorical',
+              shuffle = False,
+          seed = 137)
+  test_generator = tf.data.Dataset.from_generator(
+      lambda: test_gen,
+      output_types = (tf.float32, tf.float32)
+      ,output_shapes = ([None, 256, 256, 3], [None, 10]),
+  )
+  test_generator = test_generator.repeat()
+  test_generator = test_generator.prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
+```
+The test data is then used on the trained model to find the test accuracy. The code snippet for the same is as follows:
+
+```python
+  test_loss, test_acc = model.evaluate(test_generator, steps=test_gen.samples//test_gen.batch_size, verbose=2)
+
+```
+      
 ## Architecture of the best model:
 
 The best model after training and wandb sweeps has the following architecture:
