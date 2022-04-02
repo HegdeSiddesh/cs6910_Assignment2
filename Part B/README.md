@@ -25,7 +25,7 @@ The first step is to create an object of ConfigValues() class, which takes these
 parameters = ConfigValues(augment_data='no', batch_size=256, dense_layers=[128], dropout=0.2, epochs=5, layers_unfreeze=20, model="InceptionResNetV2")
 ```
 
-The next step is to call the ```python executePretrainedModel``` function, which takes the ConfigValues type object as a parameter and performs the train and validation data preparation and the model generation and fitting. At the end the trained model is returned by the function.
+The next step is to call the ``` executePretrainedModel``` function, which takes the ConfigValues type object as a parameter and performs the train and validation data preparation and the model generation and fitting. At the end the trained model is returned by the function.
 
 The code sample for the same is as follows:
 
