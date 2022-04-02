@@ -93,21 +93,21 @@ The following parameters need to be passed using the command line:
 The data preparation part for the test data is as follows:
 
 ```python
-  test_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
-  test_gen = test_datagen.flow_from_directory(
-          '/content/inaturalist_12K/val',
-          target_size=(256,256),
-              batch_size=parameters.batch_size,
-              class_mode='categorical',
-              shuffle = False,
-          seed = 137)
-  test_generator = tf.data.Dataset.from_generator(
-      lambda: test_gen,
-      output_types = (tf.float32, tf.float32)
-      ,output_shapes = ([None, 256, 256, 3], [None, 10]),
-  )
-  test_generator = test_generator.repeat()
-  test_generator = test_generator.prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
+test_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
+test_gen = test_datagen.flow_from_directory(
+        filePath+'/val',
+        target_size=(128,128),
+            batch_size=32,
+            class_mode='categorical',
+            shuffle = False,
+        seed = 137)
+test_generator = tf.data.Dataset.from_generator(
+    lambda: test_gen,
+    output_types = (tf.float32, tf.float32)
+    ,output_shapes = ([None, 128, 128, 3], [None, 10]),
+)
+test_generator = test_generator.repeat()
+test_generator = test_generator.prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
 ```
 The test data is then used on the trained model to find the test accuracy. The code snippet for the same is as follows:
 
