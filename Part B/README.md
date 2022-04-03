@@ -14,7 +14,7 @@ To create the model, the following parameters are required:
         1. layers_unfreeze:Number of layers from end of pretrained model to be used while training (default 20)
         2. model:The pretrained model to be used (default "InceptionResNetV2")
         3. dense_layers:Neurons in the dense layer(default [128])
-        4. epochs:Number of epochs to tun the model (default 10)
+        4. epochs:Number of epochs to run the model (default 10)
         5. batch_size: Batch size (default 256)
         6. augment_data:Augment data or not (default 'no')
         7. dropout: Dropout rate (default 0.2)
