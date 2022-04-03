@@ -23,7 +23,7 @@ To create the model, the following parameters are required:
       8. activation_dense:Activation for dense layer
       9. neurons_output:Number of neurons in the output layer 
       10. activation_output:Output layer activation
-      11. epochs:Number of epochs to tun the model (default 2)
+      11. epochs:Number of epochs to run the model (default 2)
       12. batch_size: Batch size (default 32)
       13. augment_data:Augment data or not (default False)
       14. dropout_rate Dropout rate (default 0.1)
