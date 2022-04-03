@@ -83,7 +83,7 @@ The following parameters need to be passed using the command line:
       4. batch_norm:Apply batch normalization or not ("yes" or "no")
       5. pool_size:Size of maxpool layer (integer, eg:3 if (3,3) s maxpool size)
       6. neurons_dense:Neurons in the dense layer (list of integer, eg: [64,128])
-      7. epochs:Number of epochs to tun the model (integer)
+      7. epochs:Number of epochs to run the model (integer)
       8. batch_size: Batch size (integer)
       9. augment_data:Augment data or not ("yes" or "no")
       10. dropout_rate Dropout rate (float, eg:0.1)
