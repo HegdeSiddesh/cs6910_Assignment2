@@ -78,3 +78,7 @@ The test data is then used on the trained model to find the test accuracy. The c
   test_loss, test_acc = model.evaluate(test_generator, steps=test_gen.samples//test_gen.batch_size, verbose=2)
 
 ```
+## References:
+        1. Using pretrained models: 
+                - https://keras.io/api/applications/
+                - https://machinelearningmastery.com/how-to-use-transfer-learning-when-developing-convolutional-neural-network-models/
