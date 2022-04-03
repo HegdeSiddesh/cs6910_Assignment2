@@ -118,7 +118,7 @@ The test data is then used on the trained model to find the test accuracy. The c
       
 ## Architecture of the best model:
 
-The best model is saved in the file "best_model_cnn.h5" and the same can be loaded into the code using the code:
+The best model is saved in the file "best_model_cnn.h5" and the same can be loaded into the code using the code after placing the model file in the path "MODEL_PATH":
 ```python
 model = load_model(MODEL_PATH)
 ```
