@@ -128,4 +128,7 @@ The best model after training and wandb sweeps has the following architecture:
 ![Model Architecture](https://github.com/HegdeSiddesh/cs6910_Assignment2/blob/main/Part%20A/model_arch.png)
 
 
+## References:
 
+      1. Filter visualization : https://machinelearningmastery.com/how-to-visualize-filters-and-feature-maps-in-convolutional-neural-networks/
+      2. Guided backpropagation : https://colab.research.google.com/drive/17tAC7xx2IJxjK700bdaLatTVeDA02GJn?usp=sharing#scrollTo=0tNibn3_tjSO
