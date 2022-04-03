@@ -118,6 +118,11 @@ The test data is then used on the trained model to find the test accuracy. The c
       
 ## Architecture of the best model:
 
+The best model is saved in the file "best_model_cnn.h5" and the same can be loaded into the code using the code:
+```python
+model = load_model(MODEL_PATH)
+```
+
 The best model after training and wandb sweeps has the following architecture:
 
 ![Model Architecture](https://github.com/HegdeSiddesh/cs6910_Assignment2/blob/main/Part%20A/model_arch.png)
